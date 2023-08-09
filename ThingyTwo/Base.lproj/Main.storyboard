@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="buI-Ek-G7l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGw-yd-W5v">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -13,10 +13,27 @@
             <objects>
                 <viewController id="dIs-3L-LDl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GfY-mD-Cnd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-HD-xTI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6u1-za-D24"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="leading" secondItem="6u1-za-D24" secondAttribute="leading" id="24I-Zk-ALE"/>
+                            <constraint firstItem="6u1-za-D24" firstAttribute="bottom" secondItem="MiL-HD-xTI" secondAttribute="bottom" id="4VO-uE-ktI"/>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="leading" secondItem="6u1-za-D24" secondAttribute="leading" id="4hh-Gs-e3g"/>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="bottom" secondItem="6u1-za-D24" secondAttribute="bottom" id="KEV-dF-pfi"/>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="top" secondItem="GfY-mD-Cnd" secondAttribute="top" id="TZy-O5-jW0"/>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="top" secondItem="GfY-mD-Cnd" secondAttribute="top" id="bF5-uf-aYx"/>
+                            <constraint firstAttribute="trailing" secondItem="MiL-HD-xTI" secondAttribute="trailing" id="eQg-cD-z8m"/>
+                            <constraint firstItem="MiL-HD-xTI" firstAttribute="trailing" secondItem="6u1-za-D24" secondAttribute="trailing" id="iRn-x2-mZQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Pkf-rv-nyV"/>
                 </viewController>
@@ -29,10 +46,26 @@
             <objects>
                 <viewController id="13U-f4-PA7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EG5-Bk-bxe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quf-DH-3mp">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="13U-f4-PA7" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="PnX-EO-4Ch"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SeB-5Y-EtA"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="quf-DH-3mp" secondAttribute="trailing" id="7wj-Za-yot"/>
+                            <constraint firstItem="quf-DH-3mp" firstAttribute="leading" secondItem="SeB-5Y-EtA" secondAttribute="leading" id="8iu-Q5-67g"/>
+                            <constraint firstItem="SeB-5Y-EtA" firstAttribute="bottom" secondItem="quf-DH-3mp" secondAttribute="bottom" id="9dt-kh-lol"/>
+                            <constraint firstItem="quf-DH-3mp" firstAttribute="top" secondItem="EG5-Bk-bxe" secondAttribute="top" id="j4J-0n-cPt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="oje-MW-37U"/>
                 </viewController>
@@ -40,12 +73,44 @@
             </objects>
             <point key="canvasLocation" x="1727" y="339"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="mxe-sm-36M">
+            <objects>
+                <viewController id="hGw-yd-W5v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HTH-h3-wDJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEd-o0-VHT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show"/>
+                                <connections>
+                                    <segue destination="buI-Ek-G7l" kind="show" id="rQj-re-i6L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kih-gl-hsd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kih-gl-hsd" firstAttribute="bottom" secondItem="BEd-o0-VHT" secondAttribute="bottom" id="5re-GA-Meb"/>
+                            <constraint firstItem="kih-gl-hsd" firstAttribute="trailing" secondItem="BEd-o0-VHT" secondAttribute="trailing" id="9ed-DE-Tr2"/>
+                            <constraint firstItem="BEd-o0-VHT" firstAttribute="leading" secondItem="kih-gl-hsd" secondAttribute="leading" id="Qh7-SJ-dvR"/>
+                            <constraint firstItem="BEd-o0-VHT" firstAttribute="top" secondItem="kih-gl-hsd" secondAttribute="top" id="v9P-eT-a8D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc5-MH-7RE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2659" y="-415"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FTt-sx-dBI">
             <objects>
                 <navigationController id="buI-Ek-G7l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BnL-4q-KWA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fAK-2S-zII">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -85,10 +150,23 @@
             <objects>
                 <viewController id="hJJ-JQ-FTd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfE-ro-b7b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-kV-bpj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dMK-PM-sH1"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="4Qg-kV-bpj" firstAttribute="top" secondItem="pfE-ro-b7b" secondAttribute="top" id="8CT-ML-Wpa"/>
+                            <constraint firstItem="4Qg-kV-bpj" firstAttribute="leading" secondItem="pfE-ro-b7b" secondAttribute="leading" id="H6n-x3-31t"/>
+                            <constraint firstItem="dMK-PM-sH1" firstAttribute="trailing" secondItem="4Qg-kV-bpj" secondAttribute="trailing" id="cCr-BL-vn8"/>
+                            <constraint firstItem="dMK-PM-sH1" firstAttribute="bottom" secondItem="4Qg-kV-bpj" secondAttribute="bottom" id="y8d-yI-s2r"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 3" id="62M-9W-RrA"/>
                 </viewController>
@@ -101,10 +179,23 @@
             <objects>
                 <viewController id="0WF-qM-es3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBE-QR-iwX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3p-ft-h1A">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="etO-3S-lY0"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C3p-ft-h1A" secondAttribute="trailing" id="6kF-of-4bv"/>
+                            <constraint firstItem="C3p-ft-h1A" firstAttribute="leading" secondItem="etO-3S-lY0" secondAttribute="leading" id="Dae-w3-8i3"/>
+                            <constraint firstItem="etO-3S-lY0" firstAttribute="bottom" secondItem="C3p-ft-h1A" secondAttribute="bottom" id="ab7-xQ-GNf"/>
+                            <constraint firstItem="C3p-ft-h1A" firstAttribute="top" secondItem="qBE-QR-iwX" secondAttribute="top" id="wv6-Pp-Bqr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 4" id="mCX-lw-vYH"/>
                 </viewController>
@@ -117,10 +208,23 @@
             <objects>
                 <viewController id="Lh4-2i-B8w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oP9-1u-i9u">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ija-Xg-Acv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZG9-3g-wFx"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="ZG9-3g-wFx" firstAttribute="bottom" secondItem="Ija-Xg-Acv" secondAttribute="bottom" id="Sbx-gp-hVV"/>
+                            <constraint firstItem="Ija-Xg-Acv" firstAttribute="top" secondItem="oP9-1u-i9u" secondAttribute="top" id="Uwm-bX-S3Z"/>
+                            <constraint firstItem="Ija-Xg-Acv" firstAttribute="leading" secondItem="oP9-1u-i9u" secondAttribute="leading" id="bRf-wl-uvf"/>
+                            <constraint firstItem="ZG9-3g-wFx" firstAttribute="trailing" secondItem="Ija-Xg-Acv" secondAttribute="trailing" id="uNR-8e-lzQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 5" id="gWG-8R-Tbn"/>
                 </viewController>
@@ -133,7 +237,7 @@
             <objects>
                 <viewController id="5AU-SE-oPl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGE-UV-Qs0">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="lic-Md-qy9"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -149,10 +253,23 @@
             <objects>
                 <viewController id="qQ6-m8-CTV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06V-ej-Ips">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arr-b1-1xO">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KRG-pI-Kp5"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="arr-b1-1xO" firstAttribute="top" secondItem="06V-ej-Ips" secondAttribute="top" id="Tgu-kM-jDN"/>
+                            <constraint firstItem="KRG-pI-Kp5" firstAttribute="bottom" secondItem="arr-b1-1xO" secondAttribute="bottom" id="gBH-fu-R9E"/>
+                            <constraint firstItem="arr-b1-1xO" firstAttribute="leading" secondItem="KRG-pI-Kp5" secondAttribute="leading" id="ghW-SO-yl8"/>
+                            <constraint firstAttribute="trailing" secondItem="arr-b1-1xO" secondAttribute="trailing" id="jnS-Na-npy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 7" id="ypu-W0-wG1"/>
                 </viewController>
@@ -162,6 +279,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
