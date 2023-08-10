@@ -20,6 +20,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="dIs-3L-LDl" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="mQt-9w-6CR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6u1-za-D24"/>
@@ -124,7 +127,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mBi-r1-Vyz">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" id="Uyg-pz-efX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="Uyg-pz-efX" customClass="TabBarController" customModule="ThingyTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0XV-nQ-nkB"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qgm-AP-VCG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -157,6 +160,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="hJJ-JQ-FTd" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="8zf-FI-def"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dMK-PM-sH1"/>
@@ -186,6 +192,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="0WF-qM-es3" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="99F-yb-fkt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="etO-3S-lY0"/>
@@ -215,6 +224,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="Lh4-2i-B8w" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="697-fe-cXf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZG9-3g-wFx"/>
@@ -260,6 +272,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="qQ6-m8-CTV" kind="custom" customClass="DismissSegue" customModule="ThingyTwo" customModuleProvider="target" id="SxU-lo-Ov6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KRG-pI-Kp5"/>
