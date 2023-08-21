@@ -7,10 +7,12 @@
 
 import UIKit
 
+var retainedReference: UITabBarController?
+
 class TabBarController: UITabBarController {
-    override func viewWillDisappear(_ animated: Bool) {
-        setViewControllers(nil, animated: false)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        super.viewWillDisappear(animated)
+        retainedReference = self
     }
 }
